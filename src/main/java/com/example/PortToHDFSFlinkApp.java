@@ -64,6 +64,7 @@ public class PortToHDFSFlinkApp {
         JobClient jobClient = env.executeAsync("Socket Window WordCount");
 
         // Trigger savepoint
+	/*
         CompletableFuture<String> savepointPathFuture = jobClient.triggerSavepoint("hdfs:///tmp/savepoints");
         savepointPathFuture.thenAccept(savepointPath -> {
             System.out.println("Savepoint stored at: " + savepointPath);
@@ -76,5 +77,6 @@ public class PortToHDFSFlinkApp {
 
         // Wait for the savepoint to complete
         savepointPathFuture.get();
+	*/
     }
 }
